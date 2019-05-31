@@ -1,11 +1,18 @@
 package com.example.trabalhoswipe;
 
 import android.graphics.drawable.Drawable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,17 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvUF;
     private String[] regiao;
     private String[][] uf;
-    private ImageView [][] ivUF;
     private int cont, contUF;
-
-    private int [] ivRegiao = new int[] {
-            R.drawable.norte,
-            R.drawable.ne,
-            R.drawable.co,
-            R.drawable.sudeste,
-            R.drawable.sul,
-    };
-
 
 
     @Override
@@ -48,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 "Sul",
         };
 
-        
 
         uf = new String[][] {
                 {"Acre",  "Amapá", "Amazonas","Pará"," Rondônia", "Roraima", "Tocantins"},
@@ -74,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 tvRegiao.setText(regiao[cont]);
                 contUF = 0;
-                tvUF.setText(uf[cont][contUF]);
+                tvUF.setText(uf[cont][contUF])
+                ;
             }
 
             @Override
@@ -109,5 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 tvUF.setText(uf[cont][contUF]);
             }
         });
+
+
     }
 }

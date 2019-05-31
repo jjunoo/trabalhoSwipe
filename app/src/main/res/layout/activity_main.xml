@@ -19,17 +19,17 @@
             android:id="@+id/tvRegiao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Região"
             android:textSize="25dp" />
 
-        <ImageView
+        <android.support.v4.view.ViewPager
             android:id="@+id/ivRegiao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+        </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LayoutSection"
